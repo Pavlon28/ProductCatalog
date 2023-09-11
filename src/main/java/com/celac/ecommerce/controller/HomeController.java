@@ -1,15 +1,23 @@
 package com.celac.ecommerce.controller;
 
+import com.celac.ecommerce.entity.Product;
+import com.celac.ecommerce.service.ProductService;
+import java.util.List;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-@RequestMapping({"/", "/home"})
 public class HomeController {
-  @RequestMapping(method = RequestMethod.GET)
-  public String printWelcome(ModelMap model) {
+  private final ProductService productService;
+
+  public HomeController(ProductService productService) {
+    this.productService = productService;
+  }
+
+  @GetMapping({"/", "/home"})
+  public String printWelcome(Model model) {
+    List<Product> featuredProducts = productService.featuredProducts();
     model.addAttribute("message", "Hello world!");
     return "home";
   }

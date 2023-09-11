@@ -1,18 +1,20 @@
 package com.celac.ecommerce.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;import jakarta.persistence.Table;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import org.hibernate.type.TrueFalseConverter;
 
 /** Created by user on 8/5/2015. */
 @Entity
 @Table(name = "products")
 public class Product {
-
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -29,9 +31,16 @@ public class Product {
   @Column(name = "product_Description")
   private String productDescription;
 
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
+  @ManyToOne
+  @JoinColumn(name = "category_id")
+  private Category category;
+
+  @Column(name = "caption_image_path")
+  private String captionImagePath;
+
+  @Convert(converter = TrueFalseConverter.class)
+  @Column(name = "featured", columnDefinition = "boolean default false")
+  private Boolean featured;
 
   public Product() {}
 
@@ -89,5 +98,21 @@ public class Product {
 
   public void setCategory(Category category) {
     this.category = category;
+  }
+
+  public String getCaptionImagePath() {
+    return captionImagePath;
+  }
+
+  public void setCaptionImagePath(String captionImagePath) {
+    this.captionImagePath = captionImagePath;
+  }
+
+  public Boolean getFeatured() {
+    return featured;
+  }
+
+  public void setFeatured(Boolean featured) {
+    this.featured = featured;
   }
 }

@@ -1,29 +1,32 @@
 package com.celac.ecommerce.service;
 
 import com.celac.ecommerce.entity.Product;
-import java.util.Collections;
+import com.celac.ecommerce.repository.ProductRepository;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
 /** Created by user on 8/4/2015. */
 @Service
 public class ProductServiceImpl implements ProductService {
-  @Override
-  public List<Product> findAll() {
-    return Collections.emptyList();
+  private final ProductRepository repository;
+
+  public ProductServiceImpl(ProductRepository repository) {
+    this.repository = repository;
   }
 
   @Override
-  public Product findById(Integer productId) {
+  public Product findById(Long productId) {
     return null;
   }
 
   @Override
-  public void addProduct(Product product) {}
-
-  @Override
-  public void editProduct(Product product, Integer productId) {}
+  public void saveProduct(Product product) {}
 
   @Override
   public void removeProduct(Integer productId) {}
+
+  @Override
+  public List<Product> featuredProducts() {
+    return repository.findFeaturedProducts();
+  }
 }
