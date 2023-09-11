@@ -1,9 +1,8 @@
-package com.springapp.mvc.controller;
+package com.celac.ecommerce.controller;
 
-import com.springapp.mvc.domain.Category;
-import com.springapp.mvc.domain.Product;
-import com.springapp.mvc.service.CategoryService;
-import com.springapp.mvc.service.ProductService;
+import com.celac.ecommerce.entity.Category;
+import com.celac.ecommerce.entity.Product;
+import com.celac.ecommerce.service.CategoryService;import com.celac.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

@@ -1,6 +1,6 @@
-package com.springapp.mvc.service;
+package com.celac.ecommerce.service;
 
-import com.springapp.mvc.domain.Category;
+import com.celac.ecommerce.entity.Category;
 
 import java.util.List;
 
