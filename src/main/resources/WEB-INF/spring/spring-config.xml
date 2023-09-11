@@ -50,11 +50,11 @@
     </bean>
 
 
-    <bean id="categoryService" class="com.springapp.mvc.service.CategoryServiceImpl" />
-    <bean id="productService" class="com.springapp.mvc.service.ProductServiceImpl"/>
+    <bean id="categoryService" class="com.celac.ecommerce.service.CategoryServiceImpl" />
+    <bean id="productService" class="com.celac.ecommerce.service.ProductServiceImpl"/>
 
-    <bean id="categoryDAO" class="com.springapp.mvc.dao.CategoryDaoImpl"/>
-    <bean id="productDAO" class="com.springapp.mvc.dao.ProductsDaoImpl"/>
+    <bean id="categoryDAO" class="com.celac.ecommerce.dao.CategoryDaoImpl"/>
+    <bean id="productDAO" class="com.celac.ecommerce.dao.ProductsDaoImpl"/>
 
 
 </beans>

@@ -1,4 +1,4 @@
-package com.springapp.mvc.controller;
+package com.celac.ecommerce.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by user on 8/5/2015.
  */
 @Controller
-@RequestMapping("category")
-public class CategoryController
+@RequestMapping("products")
+public class ProductPage
 {
     @RequestMapping(method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
-        model.addAttribute("message", "Category page!");
+        model.addAttribute("message", "Products page!");
         return "category";
     }
 }
