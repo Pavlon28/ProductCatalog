@@ -18,6 +18,7 @@ public class HomeController {
   @GetMapping({"/", "/home"})
   public String printWelcome(Model model) {
     List<Product> featuredProducts = productService.featuredProducts();
+    model.addAttribute("featuredProducts", featuredProducts);
     model.addAttribute("message", "Hello world!");
     return "home";
   }
