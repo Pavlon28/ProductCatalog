@@ -26,7 +26,7 @@ public class HomeController {
     model.addAttribute("mainMenu", mainMenu);
     model.addAttribute("featuredProducts", featuredProducts);
     model.addAttribute("pageContent", "home-body");
-    model.addAttribute("message", "Hello world!");
+    model.addAttribute("pageTitle", "Home page");
     return "layout";
   }
 }
