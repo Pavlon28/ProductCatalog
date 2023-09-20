@@ -53,4 +53,22 @@
             UPDATE product_catalog.categories t SET t.featured = 'T' WHERE t.id = 5;
         </sql>
     </changeSet>
+
+    <changeSet  author="scelac" id="8803282161765-9" labels="version-0.0.1">
+        <sql>
+            UPDATE product_catalog.products p SET p.url_path = '/smartphone/sony-xperia-10-v-5g-128-gb' WHERE p.id = 1;
+            UPDATE product_catalog.products p SET p.url_path = '/smartphone/xiaomi-12-lite-5g-256-gb' WHERE p.id = 2;
+            UPDATE product_catalog.products p SET p.url_path = '/smartphone/oneplus-nord-n20-se-4g-64-gb' WHERE p.id = 3;
+            UPDATE product_catalog.products p SET p.url_path = '/smartphone/asus-zenfone-10-5g-256' WHERE p.id = 4;
+            UPDATE product_catalog.products p SET p.url_path = '/smartphone/google-pixel-7a-5g-128-gb' WHERE p.id = 5;
+            UPDATE product_catalog.products p SET p.url_path = '/laptopuri-pc-si-periferice/laptop-apple-macbook-air-13-2020' WHERE p.id = 6;
+            UPDATE product_catalog.products p SET p.url_path = '/laptopuri-pc-si-periferice/laptop-asus-tuf-gaming-f15-fx506lh' WHERE p.id = 7;
+            UPDATE product_catalog.products p SET p.url_path = '/laptopuri-pc-si-periferice/laptop-acer-predator-helios-300-ph315-54' WHERE p.id = 8;
+            UPDATE product_catalog.products p SET p.url_path = '/laptopuri-pc-si-periferice/laptop-lenovo-ideapad-5-pro-14acn6msre-storm-gray' WHERE p.id = 9;
+            UPDATE product_catalog.products p SET p.url_path = '/laptopuri-pc-si-periferice/laptop-apple-macbook-pro-16-2021-space-gray' WHERE p.id = 10;
+            UPDATE product_catalog.products p SET p.url_path = '/tv-si-accesorii/televizor-xiaomi-75-q1-smart-tv-4k' WHERE p.id = 11;
+            UPDATE product_catalog.products p SET p.url_path = '/tv-si-accesorii/televizor-samsung-65-qe65qn900auxua-smart-8k-black' WHERE p.id = 12;
+            UPDATE product_catalog.products p SET p.url_path = '/tv-si-accesorii/suport-tv-gembird-wm-65rt-03-black' WHERE p.id = 13;
+        </sql>
+    </changeSet>
 </databaseChangeLog>

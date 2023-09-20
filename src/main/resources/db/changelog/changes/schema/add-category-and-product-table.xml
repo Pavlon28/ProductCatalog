@@ -46,4 +46,9 @@
             alter table categories add featured enum ('F', 'T') null;
         </sql>
     </changeSet>
+    <changeSet author="scelac" id="8803282161765-8" labels="version-0.0.1">
+        <sql>
+            alter table products  add url_path varchar(255) null;
+        </sql>
+    </changeSet>
 </databaseChangeLog>

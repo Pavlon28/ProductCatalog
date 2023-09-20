@@ -34,4 +34,9 @@ public class ProductServiceImpl implements ProductService {
   public List<Product> getProductsByCategory(Long categoryId) {
     return repository.getByCategoryId(categoryId);
   }
+
+  @Override
+  public Product getProductsByProductUrlPath(String productUrlPath) {
+    return repository.getProductByUrlPath(productUrlPath);
+  }
 }

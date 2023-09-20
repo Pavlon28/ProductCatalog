@@ -11,7 +11,7 @@
                 </li>
                 <#list mainMenu as menuItem>
                     <li class="nav-item">
-                        <a class="nav-link" href="${menuItem.urlPath}">${menuItem.categoryName}</a>
+                        <a class="nav-link" href="/${menuItem.urlPath}">${menuItem.categoryName}</a>
                     </li>
                 </#list>
             </ul>

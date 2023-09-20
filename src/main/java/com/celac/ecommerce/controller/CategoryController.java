@@ -34,7 +34,7 @@ public class CategoryController {
     model.addAttribute("mainMenu", mainMenu);
     model.addAttribute("products", products);
     model.addAttribute("pageContent", "category-body");
-    model.addAttribute("message", "Category page!");
+    model.addAttribute("pageTitle", "Category page");
     return "layout";
   }
 }

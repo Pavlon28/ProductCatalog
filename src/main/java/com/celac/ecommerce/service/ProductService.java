@@ -12,5 +12,8 @@ public interface ProductService {
   void removeProduct(Integer productId);
 
   List<Product> featuredProducts();
+
   List<Product> getProductsByCategory(Long categoryId);
+
+  Product getProductsByProductUrlPath(String productUrlPath);
 }

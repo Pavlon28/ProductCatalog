@@ -23,6 +23,8 @@ public class Product {
   @Column(name = "product_name", unique = true)
   private String productName;
 
+  private String urlPath;
+
   @Column(name = "product_stock_quantity")
   private int productStock;
 
@@ -159,5 +161,13 @@ public class Product {
 
   public void setPublishedDateTime(LocalDateTime publishedDateTime) {
     this.publishedDateTime = publishedDateTime;
+  }
+
+  public String getUrlPath() {
+    return urlPath;
+  }
+
+  public void setUrlPath(String urlPath) {
+    this.urlPath = urlPath;
   }
 }
